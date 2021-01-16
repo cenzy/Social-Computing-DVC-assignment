@@ -1,0 +1,45 @@
+stages:
+  load:
+    cmd: python src/load.py data/raw
+    deps:
+    - src/load.py
+    outs:
+    - data/raw/x_test.npy
+    - data/raw/x_train.npy
+    - data/raw/y_test.npy
+    - data/raw/y_train.npy
+  prepare:
+    cmd: python src/prepare.py data/raw data/prepared
+    deps:
+    - data/raw
+    - src/prepare.py
+    outs:
+    - data/prepared/x_test_prep.npy
+    - data/prepared/x_train_prep.npy
+    - data/prepared/y_test_prep.npy
+    - data/prepared/y_train_prep.npy
+  train:
+    cmd: python src/train.py data/prepared/ models acc.json loss.json
+    params:
+    - train.epochs
+    - train.hidden_unit
+    - train.reg
+    outs:
+    - models/model.h5
+    plots:
+    - acc.json:
+        cache: false
+    - loss.json:
+        cache: false
+    deps:
+    - data/prepared
+    - src/train.py
+  evaluate:
+    cmd: python src/evaluate.py data/prepared/ models/model.h5
+    deps:
+    - data/prepared
+    - models/model.h5
+    - src/evaluate.py
+    metrics:
+    - scores.json:
+        cache: false

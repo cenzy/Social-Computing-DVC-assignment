@@ -1,0 +1,4 @@
+train:
+  hidden_unit: 128
+  reg: 0.002
+  epochs: 9
