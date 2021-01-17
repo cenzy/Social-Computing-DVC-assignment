@@ -9,6 +9,7 @@ The assignment partially reproduces the notebook https://github.com/trekhleb/mac
 4. Now the dataset and the model are retrieved. Try to change some parameters into params.yaml and do `dvc repro`. 
 See the pipeline's dag using `dvc dag` commands. 
 Alternately do not download the dataset and the model but do `dvc repro` to execute the original experiment.
+5. See the result metrics doing `dvc metrics show`
 
 ## How to compare experiments
 1. Change the parameters into params.yaml and do `dvc repro` to execute again the experiment.
