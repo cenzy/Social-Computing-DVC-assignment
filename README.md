@@ -10,5 +10,10 @@ The assignment partially reproduces the notebook https://github.com/trekhleb/mac
 See the pipeline's dag using `dvc dag` commands. 
 Alternately do not download the dataset and the model but do `dvc repro` to execute the original experiment.
 
+## How to compare experiments
+1. Change the parameters into params.yaml and do `dvc repro` to execute again the experiment.
+2. Do `dvc metrics diff` to show the differences in loss and accuracy between previous experiment and the new experiment.
+3. If you want to see the plots about loss and accuracy values for each epoch (an history generated during the training phase) do `dvc plots show acc.json` for the accuracy plot and `dvc plots show loss.json` for the loss plot.
+
 ## Author
 Vincenzo Digeno
