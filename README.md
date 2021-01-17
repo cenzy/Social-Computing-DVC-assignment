@@ -1,5 +1,6 @@
 # Social-Computing-DVC-assignment
 Social Computing's lab assignment about DVC, a tool for version control system and reproducibility for Data Science and Machine Learning projects.
+The assignment partially reproduces the notebook https://github.com/trekhleb/machine-learning-experiments/blob/master/experiments/digits_recognition_mlp/digits_recognition_mlp.ipynb
 
 ## How to reproduce the pipeline
 1. Clone the project.
