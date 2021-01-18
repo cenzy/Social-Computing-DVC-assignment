@@ -1,5 +1,5 @@
 tensorflow
 numpy
 pandas
-yaml
+pyyaml
 json
