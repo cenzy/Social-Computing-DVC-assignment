@@ -3,8 +3,9 @@ Social Computing's lab assignment about DVC, a tool for version control system a
 The assignment partially reproduces the notebook https://github.com/trekhleb/machine-learning-experiments/blob/master/experiments/digits_recognition_mlp/digits_recognition_mlp.ipynb
 
 ## How to reproduce the pipeline
+Tested in python 3.8.6 
 1. Clone the project.
-2. Install the dependencies from the file dependencies.txt.
+2. Install the dependencies from the file requirements.txt.
 3. For retrieving the dataset and models do `dvc pull`, give the permission to DVC and enter the verification code.
 4. Now the dataset and the model are retrieved. Try to change some parameters into params.yaml and do `dvc repro`. 
 See the pipeline's dag using `dvc dag` commands. 
