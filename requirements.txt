@@ -2,4 +2,3 @@ tensorflow
 numpy
 pandas
 pyyaml
-json
